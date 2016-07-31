@@ -254,7 +254,7 @@
 		3D5E8F0B8C0C8CF80424B2F1 /* Pods-ReferenceApplicationStage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReferenceApplicationStage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReferenceApplicationStage/Pods-ReferenceApplicationStage.debug.xcconfig"; sourceTree = "<group>"; };
 		5C811582FF35952282DEF8B8 /* Pods-ReferenceApplicationProd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReferenceApplicationProd.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReferenceApplicationProd/Pods-ReferenceApplicationProd.release.xcconfig"; sourceTree = "<group>"; };
 		8E3583235171AF1500847E95 /* libPods-ReferenceApplicationStage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReferenceApplicationStage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA5545EE6B31AED7E1691D57 /* Pods-ReferenceApplicationDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReferenceApplicationDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReferenceApplicationDev/Pods-ReferenceApplicationDev.debug.xcconfig"; sourceTree = "<group>"; };
+		A446536312257326442CF7CC /* Pods-ReferenceApplicationDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReferenceApplicationDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReferenceApplicationDev/Pods-ReferenceApplicationDev.debug.xcconfig"; sourceTree = "<group>"; };
 		ADB3358B7653EB61D74D775D /* Pods-ReferenceApplicationStage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReferenceApplicationStage.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReferenceApplicationStage/Pods-ReferenceApplicationStage.release.xcconfig"; sourceTree = "<group>"; };
 		C9532F92DD70CB6CED955FDD /* Pods-ReferenceApplicationProd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReferenceApplicationProd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReferenceApplicationProd/Pods-ReferenceApplicationProd.debug.xcconfig"; sourceTree = "<group>"; };
 		D06F6353BA558B3C9E186677 /* libPods-ReferenceApplicationProd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReferenceApplicationProd.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -788,12 +788,12 @@
 		63F33024E48E0F4D910E0AD3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AA5545EE6B31AED7E1691D57 /* Pods-ReferenceApplicationDev.debug.xcconfig */,
 				D570C27163000F0D8B3159A1 /* Pods-ReferenceApplicationDev.release.xcconfig */,
 				C9532F92DD70CB6CED955FDD /* Pods-ReferenceApplicationProd.debug.xcconfig */,
 				5C811582FF35952282DEF8B8 /* Pods-ReferenceApplicationProd.release.xcconfig */,
 				3D5E8F0B8C0C8CF80424B2F1 /* Pods-ReferenceApplicationStage.debug.xcconfig */,
 				ADB3358B7653EB61D74D775D /* Pods-ReferenceApplicationStage.release.xcconfig */,
+				A446536312257326442CF7CC /* Pods-ReferenceApplicationDev.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -895,10 +895,17 @@
 				TargetAttributes = {
 					2AB64C1E1C4FC45400C878CE = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = DC7P966WU6;
 					};
 					2AB64C371C4FC45400C878CE = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 2AB64C1E1C4FC45400C878CE;
+					};
+					2AB64C4F1C4FD3C600C878CE = {
+						DevelopmentTeam = DC7P966WU6;
+					};
+					2AB64C5D1C4FD3CA00C878CE = {
+						DevelopmentTeam = DC7P966WU6;
 					};
 				};
 			};
@@ -1404,6 +1411,7 @@
 			baseConfigurationReference = C9532F92DD70CB6CED955FDD /* Pods-ReferenceApplicationProd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ReferenceApplication/Supporting Files/ReferenceApplicationProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1413,6 +1421,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ciandt.com.ReferenceApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6ba92191-983d-444b-a9d1-6cd3ec561c04";
 			};
 			name = Debug;
 		};
@@ -1421,6 +1430,7 @@
 			baseConfigurationReference = 5C811582FF35952282DEF8B8 /* Pods-ReferenceApplicationProd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ReferenceApplication/Supporting Files/ReferenceApplicationProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1430,6 +1440,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ciandt.com.ReferenceApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6ba92191-983d-444b-a9d1-6cd3ec561c04";
 			};
 			name = Release;
 		};
@@ -1459,14 +1470,17 @@
 		};
 		2AB64C591C4FD3C600C878CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA5545EE6B31AED7E1691D57 /* Pods-ReferenceApplicationDev.debug.xcconfig */;
+			baseConfigurationReference = A446536312257326442CF7CC /* Pods-ReferenceApplicationDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ReferenceApplication/Supporting Files/ReferenceApplicationDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ciandt.com.ReferenceApplication.Dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2dc14a52-460f-472f-ab7a-8cd0160bc5af";
 			};
 			name = Debug;
 		};
@@ -1475,11 +1489,14 @@
 			baseConfigurationReference = D570C27163000F0D8B3159A1 /* Pods-ReferenceApplicationDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ReferenceApplication/Supporting Files/ReferenceApplicationDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ciandt.com.ReferenceApplication.Dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2dc14a52-460f-472f-ab7a-8cd0160bc5af";
 			};
 			name = Release;
 		};
@@ -1488,11 +1505,13 @@
 			baseConfigurationReference = 3D5E8F0B8C0C8CF80424B2F1 /* Pods-ReferenceApplicationStage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ReferenceApplication/Supporting Files/ReferenceApplicationStage-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ciandt.com.ReferenceApplication.Stage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7ec70ebf-eac4-4f9e-adf0-308335e8d508";
 			};
 			name = Debug;
 		};
@@ -1501,11 +1520,13 @@
 			baseConfigurationReference = ADB3358B7653EB61D74D775D /* Pods-ReferenceApplicationStage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ReferenceApplication/Supporting Files/ReferenceApplicationStage-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ciandt.com.ReferenceApplication.Stage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7ec70ebf-eac4-4f9e-adf0-308335e8d508";
 			};
 			name = Release;
 		};
@@ -1519,7 +1540,7 @@
 				2AB64C401C4FC45400C878CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2AB64C411C4FC45400C878CE /* Build configuration list for PBXNativeTarget "ReferenceApplicationProd" */ = {
 			isa = XCConfigurationList;
@@ -1528,7 +1549,7 @@
 				2AB64C431C4FC45400C878CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2AB64C441C4FC45400C878CE /* Build configuration list for PBXNativeTarget "ReferenceApplicationTests" */ = {
 			isa = XCConfigurationList;
@@ -1537,7 +1558,7 @@
 				2AB64C461C4FC45400C878CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2AB64C581C4FD3C600C878CE /* Build configuration list for PBXNativeTarget "ReferenceApplicationDev" */ = {
 			isa = XCConfigurationList;
@@ -1546,7 +1567,7 @@
 				2AB64C5A1C4FD3C600C878CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		2AB64C661C4FD3CA00C878CE /* Build configuration list for PBXNativeTarget "ReferenceApplicationStage" */ = {
 			isa = XCConfigurationList;
@@ -1555,7 +1576,7 @@
 				2AB64C681C4FD3CA00C878CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
